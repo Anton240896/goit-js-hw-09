@@ -3,6 +3,8 @@ const button_stop = document.querySelector('button[data-stop]');
 const body = document.querySelector('body');
 
 button_start.addEventListener('click', onClickRandomStart); 
+button_stop.addEventListener('click', a);
+
 
 function onClickRandomStart() {
     body.style.backgroundColor = getRandomHexColor();
