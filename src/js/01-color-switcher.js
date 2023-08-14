@@ -1,28 +1,25 @@
-const buttonStart = document.querySelector('button[data-start]');
-const buttonStop = document.querySelector('button[ data-stop]');
+const button_start = document.querySelector('button[data-start]');
+const button_stop = document.querySelector('button[data-stop]');
 const body = document.querySelector('body');
 
-console.log(buttonStop);
+button_start.addEventListener('click', onClickRandomStart); 
 
-buttonStart.addEventListener('click', getChangeColorStart);
-buttonStop.addEventListener('click');
-
-function getChangeColorStart() {
-    body.style.backgroundColor = getChangeColor();
+function onClickRandomStart() {
+    body.style.backgroundColor = getRandomHexColor();
 }
 
 
 
-function getChangeColor() {
-    body.style.backgroundColor = getRandomHexColor();
-  
-     }
 
 
-           
+
+
+
+
+
 function getRandomHexColor() {
-    return `#${Math.floor(Math.random() * 16777215)
-      .toString(16)
-      .padStart(6, 0)}`;
-  }
-        
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
+}
+      
