@@ -1,27 +1,21 @@
-const button_start = document.querySelector('button[data-start]');
-const button_stop = document.querySelector('button[data-stop]');
-const body = document.querySelector('body');
+import getRandomHexColor from './getRandomColor';
 
-button_start.addEventListener('click', onClickRandomStart); 
-button_stop.addEventListener('click', a);
 
+      
+const elem = {
+button_start : document.querySelector('button[data-start]'),
+button_stop : document.querySelector('button[data-stop]'),
+body : document.querySelector('body'),
+};
+
+// elem.button_stop.addEventListener('click', a);
+elem.button_start.addEventListener('click', onClickRandomStart)
 
 function onClickRandomStart() {
-    body.style.backgroundColor = getRandomHexColor();
+  elem.body.style.backgroundColor = getRandomHexColor();
 }
 
 
 
 
 
-
-
-
-
-
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, 0)}`;
-}
-      
