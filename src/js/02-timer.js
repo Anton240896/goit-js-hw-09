@@ -1,5 +1,6 @@
 import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
+import convertMs from './convertMs'
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const elem = {
@@ -11,5 +12,16 @@ const elem = {
     span_seconds : document.querySelector('span[data-seconds]')
 }
 
+elem.button.disabled = true;
+
 let timerId = null;
 
+elem.button.addEventListener('click', clickStart);
+
+function clickStart() {
+    timerId = setInterval(() => {
+let currentTime = new Date;
+    })
+}
+let currentTime = Date.now;
+console.log(currentTime);

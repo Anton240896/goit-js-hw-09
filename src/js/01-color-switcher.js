@@ -6,9 +6,7 @@ const elem = {
 button_start : document.querySelector('button[data-start]'),
 button_stop : document.querySelector('button[data-stop]'),
 body : document.querySelector('body'),
-
 };
-
 
 elem.button_start.addEventListener('click', onClickStart);
 elem.button_stop.addEventListener('click', onClickStop);
@@ -20,10 +18,7 @@ function onClickStart() {
   },1000);
   elem.button_start.disabled = true;
   elem.button_stop.disabled = false;
-
-
 }
-
 
 function onClickStop() {
   elem.button_start.disabled = false;
