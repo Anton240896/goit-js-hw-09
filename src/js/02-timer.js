@@ -30,8 +30,8 @@ const options = {
 
         /////////future
       } else if (selectedDate > new Date()) {
-        elem.button.disabled = false;
-        Notify.success("Congratulations, you are now in the future");
+          Notify.success("Congratulations, you are now in the future");
+          elem.button.disabled = false;
       }
     }
      };
