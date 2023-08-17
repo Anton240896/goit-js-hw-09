@@ -9,9 +9,6 @@ body : document.querySelector('body'),
 };
 
 elem.button_start.addEventListener('click', onClickStart);
-elem.button_stop.addEventListener('click', onClickStop);
-
-
 function onClickStart() {
   color_random = setInterval(() => {
     elem.body.style.backgroundColor = getRandomHexColor();
@@ -20,6 +17,7 @@ function onClickStart() {
   elem.button_stop.disabled = false;
 }
 
+elem.button_stop.addEventListener('click', onClickStop);
 function onClickStop() {
   elem.button_start.disabled = false;
   elem.button_stop.disabled = true;
