@@ -51,13 +51,6 @@ clearInterval(timerId)
  }
  }
  
- 
-function createTimer({ days, hours, minutes, seconds }) {
-  elem.span_days.textContent = days;
-  elem.span_hours.textContent = hours;
-  elem.span_minutes.textContent = minutes;
-  elem.span_seconds.textContent = seconds;
-}
 
  function convertMs(ms) {
     const second = 1000;
@@ -78,6 +71,3 @@ function createTimer({ days, hours, minutes, seconds }) {
     return String(value).padStart(2, '0');
   }
   addLeadingZero();
-
-  createTimer({ days, hours, minutes, seconds });
-    return { days, hours, minutes, seconds };
