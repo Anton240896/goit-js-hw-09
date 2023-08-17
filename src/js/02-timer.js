@@ -14,6 +14,10 @@ const elem = {
 elem.button.disabled = true;
 
 let timerId = null;
+const currentTime = new Date();
+let selected_date = null;
+
+
 
 const options = {
     enableTime: true,
@@ -21,30 +25,39 @@ const options = {
     defaultDate: new Date(),
     minuteIncrement: 1,
     onClose(selectedDates) {
-     const selectedDate = (selectedDates[0]);
+   let selectedDate = (selectedDates[0]);
      
      //////////past
      if (selectedDate < new Date()) {
-        Notify.failure("Please choose a date in the future");
+        Notify.failure("🥺Please choose a date in the future");
         elem.button.disabled = true;
 
         /////////future
       } else if (selectedDate > new Date()) {
-          Notify.success("Congratulations, you are now in the future");
+          Notify.success("😄Congratulations! You are now in the future");
           elem.button.disabled = false;
       }
     }
      };
-    
+     
   const flatpickr = flatpickr(elem.input, options);
 
+elem.button.addEventListener('click', clickTimer) 
+ function clickTimer() {
+ const differenceTime =  selected_date - currentTime;
 
-elem.button.addEventListener('click', clickStart);
-function clickStart() {
-    timerId = setInterval(() => {
-    })
+ if (differenceTime < 1000 ) {
+clearInterval(timerId)
+ }
+ }
+ 
+ 
+function createTimer({ days, hours, minutes, seconds }) {
+  elem.span_days.textContent = days;
+  elem.span_hours.textContent = hours;
+  elem.span_minutes.textContent = minutes;
+  elem.span_seconds.textContent = seconds;
 }
-
 
  function convertMs(ms) {
     const second = 1000;
@@ -64,3 +77,7 @@ function clickStart() {
   function addLeadingZero(value) {
     return String(value).padStart(2, '0');
   }
+  addLeadingZero();
+
+  createTimer({ days, hours, minutes, seconds });
+    return { days, hours, minutes, seconds };
