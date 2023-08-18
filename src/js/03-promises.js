@@ -2,7 +2,6 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 
 const elem = {
-  form : document.querySelector('.form'),
   input_first_delay : document.querySelector('input[name="delay"]'),
   input_delay_step : document.querySelector('input[name="delay"]'),
   input_amount : document.querySelector('input[name="amount"]'),
@@ -10,6 +9,7 @@ const elem = {
 }
 
 elem.form.addEventListener('click', formSubmit);
+
 function formSubmit() {
   
 }  
