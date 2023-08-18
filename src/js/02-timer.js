@@ -29,7 +29,9 @@ const options = {
         Notify.failure("😥Please choose a date in the future"); 
         elem.button.disabled = true; 
         elem.input.style.borderColor = "red"; 
+        
 
+        
         
     //////////future
       } else {
