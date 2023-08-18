@@ -65,24 +65,23 @@ function timerOn() {
     }, 1000);
 }
 function convertMs(ms) {
-  // Кількість мілісекунд у одиниці часу
+
   const second = 1000;
   const minute = second * 60;
   const hour = minute * 60;
   const day = hour * 24;
-  // Залишкові дні
+
   const days = addLeadingZero(Math.floor(ms / day));
-  // Залишкові години
+
   const hours = addLeadingZero(Math.floor((ms % day) / hour));
-  // Залишкові хвилини
+
   const minutes = addLeadingZero(Math.floor(((ms % day) % hour) / minute));
-  // Залишкові секунди
+
   const seconds = addLeadingZero(Math.floor((((ms % day) % hour) % minute) / second));
   return { days, hours, minutes, seconds };
 }
-// Функція для додавання переднього нуля до числа Форматування часу
+
 function addLeadingZero(value) {
     return String(value).padStart(2, '0');
 };
 
-console.log(selectedDates);
