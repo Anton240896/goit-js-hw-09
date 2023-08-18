@@ -12,10 +12,11 @@ const elem = {
 elem.form.addEventListener('click', formSubmit);
 function formSubmit() {
   
-}
+}  
 
 
 createPromise(2, 1500)
+
   .then(({ position, delay }) => {
     Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
   })
