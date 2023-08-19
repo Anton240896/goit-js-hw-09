@@ -15,8 +15,8 @@ const elem = {
 
 elem.button.disabled = true;
 
-let chosenDate = null;
-let timerId = null;
+let chosenDate;
+let timerId;
 
 const options = {
   enableTime: true,
@@ -26,7 +26,7 @@ const options = {
   onClose(selectedDates) {
   
     //////////past
-      if (selectedDates[0] < Date.now()) {
+      if (selectedDates[0] < options.defaultDate) {
         Notify.failure("😥Please choose a date in the future"); 
         elem.button.disabled = true; 
         elem.input.style.borderColor = "red"; 
