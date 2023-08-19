@@ -2,6 +2,7 @@ import getRandomHexColor from './getRandomColor';
 
 let color_random = null;
 
+
 const elem = {
 button_start : document.querySelector('button[data-start]'),
 button_stop : document.querySelector('button[data-stop]'),
