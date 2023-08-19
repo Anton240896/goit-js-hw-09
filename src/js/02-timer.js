@@ -24,9 +24,10 @@ const options = {
   defaultDate: new Date(),
   minuteIncrement: 1,
   onClose(selectedDates) {
+    let selectedDate = (selectedDates[0])
   
     //////////past
-      if (selectedDates[0] < options.defaultDate) {
+      if (selectedDate < options.defaultDate) {
         Notify.failure("😥Please choose a date in the future"); 
         elem.button.disabled = true; 
         elem.input.style.borderColor = "red"; 
@@ -34,7 +35,7 @@ const options = {
 
     //////////future
       } else {
-        chosenDate = selectedDates[0]; 
+        chosenDate = selectedDate; 
         Notify.success("😄Congratulations! You are now in the future");
         elem.button.disabled =  false; 
         elem.button.addEventListener('click', timerOn);
