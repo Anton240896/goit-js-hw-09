@@ -31,8 +31,6 @@ const options = {
         elem.input.style.borderColor = "red"; 
         
 
-        
-        
     //////////future
       } else {
         chosenDate = selectedDates[0]; 
