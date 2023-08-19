@@ -2,6 +2,14 @@
   box-sizing: border-box;
 }
 
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 
 button {
   cursor: pointer;
