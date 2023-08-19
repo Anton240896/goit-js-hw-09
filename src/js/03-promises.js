@@ -5,7 +5,7 @@ const elem = {
   input_delay: document.querySelector('input[name="delay"]'),
   input_step: document.querySelector('input[name="step"]'),
   input_amount: document.querySelector('input[name="amount"]')
-}
+};
 
 function createPromise(position, delay) {
   return new Promise((resolve, reject) => {
@@ -20,6 +20,8 @@ function createPromise(position, delay) {
     }, delay);
   });
  }
+
+
   elem.form.addEventListener('click', promiseCreate);
 function promiseCreate(evt) {
   evt.preventDefault();
