@@ -1,6 +1,6 @@
 import getRandomHexColor from './getRandomColor';
 
-let color_random = null;
+let color_random;
 
 
 const elem = {
